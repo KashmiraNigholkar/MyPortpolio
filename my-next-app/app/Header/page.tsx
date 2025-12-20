@@ -84,7 +84,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-    <div className="stats grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div className="stats px-[8%] lg:px-[16%] mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
       {statsData.map((stat, index) => (
         <div key={index} className="flex gap-2 items-center">
           <h1
