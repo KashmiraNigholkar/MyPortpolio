@@ -1,20 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { easeOut } from "framer-motion";
-
-const card = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: easeOut, // ✅ valid
-    },
-  },
-};
-
+import { motion, easeOut } from "framer-motion";
 
 const ServicesData = [
   {
@@ -48,7 +34,14 @@ const container = {
   },
 };
 
-
+const card = {
+  hidden: { opacity: 0, y: 60 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: easeOut }, // ✅ TypeScript compatible
+  },
+};
 
 export default function Services() {
   return (
@@ -128,7 +121,7 @@ export default function Services() {
                 className="h-[2px] bg-gray-700 mt-5"
                 initial={{ width: "0%" }}
                 whileHover={{ width: "100%" }}
-                transition={{ duration: 0.4 }}
+                transition={{ duration: 0.4, ease: easeOut }}
               />
             </motion.div>
           ))}
