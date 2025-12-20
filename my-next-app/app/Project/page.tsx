@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink } from "lucide-react"
 import { motion } from "framer-motion"
+import { easeOut } from "framer-motion";
+
 
 export default function Project() {
   const projects = [
@@ -73,14 +75,19 @@ export default function Project() {
     },
   }
 
-  const cardAnim = {
-    hidden: { opacity: 0, y: 40 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+
+const cardAnim = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: easeOut, // ✅ valid
     },
-  }
+  },
+};
+
 
   return (
     <section id="projects" className="py-20 bg-muted/500">
