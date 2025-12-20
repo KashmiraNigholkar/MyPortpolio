@@ -1,21 +1,19 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ExternalLink } from "lucide-react"
-import { motion } from "framer-motion"
-import { easeOut } from "framer-motion";
-
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink } from "lucide-react";
+import { motion, Variants, easeOut } from "framer-motion";
 
 export default function Project() {
   const projects = [
     {
-      title: "Coffe-Shop",
+      title: "Coffee-Shop",
       description:
         "A Coffee Shop Website built with React.js that lets users browse the menu, order online, and explore offers with a responsive, interactive UI and smooth navigation for an engaging user experience.",
       image: "./coffe-shop.png",
-      technologies: ["React.js", "Tailwind css", "Figma"],
+      technologies: ["React.js", "Tailwind CSS", "Figma"],
       liveUrl: "https://coffe-shop-drab.vercel.app/",
       githubUrl: "https://github.com/KashmiraNigholkar/Coffe_Shop",
     },
@@ -24,7 +22,7 @@ export default function Project() {
       description:
         "A Full Stack Hotel Booking Website that enables users to search, view, and book hotel rooms online with secure authentication and real-time availability. It includes an admin panel for managing hotels, rooms, and bookings efficiently.",
       image: "./Hotel-Booking.png",
-      technologies: ["React js", "Express.js", "Node.js", "MongoDB"],
+      technologies: ["React.js", "Express.js", "Node.js", "MongoDB"],
       liveUrl: "",
       githubUrl: "https://github.com/KashmiraNigholkar/Full-Stack-Hotel_Booking",
     },
@@ -33,7 +31,7 @@ export default function Project() {
       description:
         "A Full Stack Recipe Sharing Web App where users can create, share, and explore recipes with images and ingredients. It includes user authentication, interactive UI, and an admin panel for managing content.",
       image: "./Recipe-Sharing-Platform.png",
-      technologies: ["React js", "Express.js", "Node.js", "MongoDB"],
+      technologies: ["React.js", "Express.js", "Node.js", "MongoDB"],
       liveUrl: "",
       githubUrl: "https://github.com/KashmiraNigholkar/Full-Stack--Food-Web-Tomato",
     },
@@ -42,7 +40,7 @@ export default function Project() {
       description:
         "A Full Stack Spotify Clone App that lets users stream music, create playlists, and manage their library with real-time playback. It features user authentication, a modern UI, and an admin panel for managing songs and artists.",
       image: "./Spotify.png",
-      technologies: ["React js", "Express.js", "Node.js", "MongoDB"],
+      technologies: ["React.js", "Express.js", "Node.js", "MongoDB"],
       liveUrl: "",
       githubUrl: "https://github.com/KashmiraNigholkar/Spotify_Clone",
     },
@@ -51,7 +49,7 @@ export default function Project() {
       description:
         "A Travel Web App that helps users explore destinations, book trips, and plan itineraries with an interactive React-based interface and real-time travel information.",
       image: "./Travel.png",
-      technologies: ["React.js", "scss", "Figma", "Tailwind css"],
+      technologies: ["React.js", "SCSS", "Figma", "Tailwind CSS"],
       liveUrl: "",
       githubUrl: "https://github.com/KashmiraNigholkar/Travel.-React_Web",
     },
@@ -60,39 +58,33 @@ export default function Project() {
       description:
         "Real Estate Website (React) A modern and responsive real estate web application built with React.js, allowing users to browse, search, and view property listings with detailed information, images, and filters.",
       image: "./Real-estate.png",
-      technologies: ["React js", "tailwindcss", "Figma"],
+      technologies: ["React.js", "Tailwind CSS", "Figma"],
       liveUrl: "",
       githubUrl: "https://github.com/KashmiraNigholkar/Real_Estate",
     },
-  ]
+  ];
 
   /* Animation Variants */
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: { staggerChildren: 0.15 },
     },
-  }
+  };
 
-
-const cardAnim = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: easeOut, // ✅ valid
+  const cardAnim: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: easeOut },
     },
-  },
-};
-
+  };
 
   return (
     <section id="projects" className="py-20 bg-muted/500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Heading Animation */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -104,7 +96,6 @@ const cardAnim = {
           <h2 className="text-2xl sm:text-4xl font-bold mb-1 text-[var(--primary-color)]">
             Featured Projects
           </h2>
-
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-white">
             A showcase of my recent work, demonstrating various technologies and problem-solving approaches.
           </p>
@@ -119,11 +110,7 @@ const cardAnim = {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              variants={cardAnim}
-              whileHover={{ scale: 1.03 }}
-            >
+            <motion.div key={index} variants={cardAnim} whileHover={{ scale: 1.03 }}>
               <Card className="overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="aspect-video overflow-hidden">
                   <img
@@ -138,9 +125,7 @@ const cardAnim = {
                 </CardHeader>
 
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    {project.description}
-                  </p>
+                  <p className="text-muted-foreground mb-4">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
@@ -151,23 +136,20 @@ const cardAnim = {
                   </div>
 
                   <div className="flex gap-2">
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1"
-                    >
-                      <Button size="sm" className="w-full">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
-                      </Button>
-                    </a>
-
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1"
+                      >
+                        <Button size="sm" className="w-full">
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Live Demo
+                        </Button>
+                      </a>
+                    )}
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <Button size="sm" variant="outline">
                         <i className="bi bi-github text-xl"></i>
                       </Button>
@@ -180,5 +162,5 @@ const cardAnim = {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
