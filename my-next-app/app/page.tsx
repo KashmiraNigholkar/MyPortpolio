@@ -6,7 +6,7 @@ import Work from "./Work/page";
 import Project from "./Project/page";
 
 import Contact from "./Contact/page";
-import AchievementsPage from "./acheivements/AcheivementsPage";
+import AchievementsPage from "./achievements/AchievementsPage";
 import FooterPage from "./Footer/FooterPage";
 
 // import Footer from "./Footer/page.tsx";
