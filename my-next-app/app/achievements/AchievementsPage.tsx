@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const achievements = [
   {
-    title: "3rd Year Topper",
+    title: "2nd Rank in Academics-Third Year",
     year: "2025",
     description:
       "Secured top rank in 3rd year with outstanding academic performance and project excellence.",
