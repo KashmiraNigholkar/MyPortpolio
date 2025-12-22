@@ -14,7 +14,7 @@ export default function Project() {
         "A Coffee Shop Website built with React.js that lets users browse the menu, order online, and explore offers with a responsive, interactive UI and smooth navigation for an engaging user experience.",
       image: "./Coffe-shop.png",
       technologies: ["React.js", "Tailwind CSS", "Figma"],
-      liveUrl: "https://coffe-shop-drab.vercel.app/",
+      // liveUrl: "https://coffe-shop-drab.vercel.app/",
       githubUrl: "https://github.com/KashmiraNigholkar/Coffe_Shop",
     },
     {
