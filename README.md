@@ -32,6 +32,7 @@ Tailwind CSS / Bootstrap
 
 Git & GitHub
 
-Deployed on Vercel (if applicable)
+Deployed on Vercel 
+
 
 
