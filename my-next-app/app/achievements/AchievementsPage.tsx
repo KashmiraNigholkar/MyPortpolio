@@ -9,7 +9,7 @@ const achievements = [
     description:
       "Secured top rank in 3rd year with outstanding academic performance and project excellence.",
     icon: "🎓",
-    certificate: "/3rd_year_topper.pdf",
+    certificate: "/Trophy.jpeg",
   },
   {
     title: "Full Stack Developer Internship",
